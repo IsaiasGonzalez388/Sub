@@ -19,7 +19,8 @@ export default function PlanSelector() {
   const plans = isMonthly ? monthlyPlans : yearlyPlans;
 
   return (
-    <div className="plan-container">
+    <section className="Subsection">
+       <div className="plan-container">
       <h2 className="title">Elige tu Plan</h2>
 
       <div className="toggle-container">
@@ -67,6 +68,7 @@ export default function PlanSelector() {
         </div>
         <small>Quedan 15 días</small>
       </div>
-    </div>
+    </div></section>
+   
   );
 }
