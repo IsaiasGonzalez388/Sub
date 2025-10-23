@@ -1,8 +1,8 @@
-html, body {
+.Subsection {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  width: 100%;
+  width: 100vw;
   height: 100%;
   overflow-x: hidden;
   background-color: #171121;
@@ -20,14 +20,14 @@ html, body {
   width: 100%;
   text-align: center;
   background-color: #171121;
-  padding: 2rem 1rem;
+  
 }
 
 /* Evita que se desborde en pantallas bajas */
 @media (max-height: 750px) {
   .plan-container {
     justify-content: flex-start;
-    padding-top: 3rem;
+    
   }
 }
 
@@ -37,7 +37,7 @@ html, body {
   margin-bottom: 1rem;
 }
 
-/* Toggle */
+
 .toggle-container {
   display: flex;
   justify-content: center;
@@ -95,7 +95,7 @@ html, body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; /* centra contenido interno */
+  align-items: center; 
 }
 
 .plan-card:hover {
@@ -126,7 +126,7 @@ html, body {
   margin: 0.8rem 0;
 }
 
-/* Botón */
+
 .choose-btn {
   background-color: #32144e;
   color: white;
@@ -142,7 +142,7 @@ html, body {
   background-color: #260b86;
 }
 
-/* Lista */
+
 ul {
   list-style: none;
   padding: 0;
@@ -151,7 +151,7 @@ ul {
   text-align: left;
 }
 
-/* Info de suscripción */
+
 .subscription-info {
   margin-top: 2rem;
   color: #aaa;
@@ -160,7 +160,7 @@ ul {
   max-width: 600px;
 }
 
-/* Barra de progreso */
+
 .progress-bar {
   background: #222;
   border-radius: 8px;
@@ -205,4 +205,90 @@ ul {
   .subscription-info {
     font-size: 0.8rem;
   }
+}
+
+
+.payment-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #171121;
+  padding: 2rem;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 420px;
+  color: white;
+  position: relative;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  background: none;
+  color: #bbb;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.payment-form input {
+  width: 100%;
+  background: #32144e;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  padding: 0.2rem;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.payment-form label {
+  display: block;
+  font-size: 0.85rem;
+  margin-bottom: 4px;
+  text-align: left;
+}
+
+.card-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.8rem;
+  margin-top: 0.6rem;
+}
+
+/* asegúrate de que ambos inputs midan lo mismo visualmente */
+.card-details > div {
+  flex: 1;
+}
+
+.pay-btn {
+  width: 100%;
+  background: linear-gradient(90deg, #32144e, #32144e);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 0.8rem;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: 0.3s;
+}
+
+.pay-btn:hover {
+  background: linear-gradient(90deg, #7d3ae0, #a163ff);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
 }
